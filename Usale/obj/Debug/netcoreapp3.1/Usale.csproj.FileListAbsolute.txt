@@ -165,3 +165,6 @@ C:\Users\T-Gamer\source\repos\Usale\Usale\obj\Debug\netcoreapp3.1\Razor\Areas\Id
 C:\Users\T-Gamer\source\repos\Usale\Usale\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 C:\Users\T-Gamer\source\repos\Usale\Usale\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\T-Gamer\source\repos\Usale\Usale\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
+C:\Users\T-Gamer\source\repos\Usale\Usale\obj\Debug\netcoreapp3.1\Usale.csproj.CoreCompileInputs.cache
+C:\Users\T-Gamer\source\repos\Usale\Usale\obj\Debug\netcoreapp3.1\Usale.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\T-Gamer\source\repos\Usale\Usale\obj\Debug\netcoreapp3.1\Usale.MvcApplicationPartsAssemblyInfo.cache
