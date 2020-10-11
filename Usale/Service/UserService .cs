@@ -9,6 +9,11 @@ using Usale.Repository;
 
 namespace Usale.Service
 {
+    public interface IUserService
+    {
+        Task CadastroVendedor(VendedorDTO v);
+        Task CadastroCliente(ClienteDTO c);
+    }
 
     public class UserService : IUserService
     {
