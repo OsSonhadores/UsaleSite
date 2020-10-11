@@ -31,13 +31,13 @@ namespace Usale.Controllers
         [HttpGet]
         public async Task CadastroVendedor([FromForm] VendedorDTO v)
         {
-            //await _serv.CadastroVendedor(v);
+            await _serv.CadastroVendedor(v);
         }
 
         [HttpGet]
         public async Task CadastroCliente([FromForm] ClienteDTO c)
         {
-            //await _serv.CadastroCliente(c);
+            await _serv.CadastroCliente(c);
         }
 
     }
