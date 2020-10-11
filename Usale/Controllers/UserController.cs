@@ -9,8 +9,6 @@ namespace Usale.Controllers
     public class UserController: Controller
     {
 
-        private readonly IUserService _serv;
-
 
 
     }
