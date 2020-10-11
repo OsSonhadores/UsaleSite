@@ -6,17 +6,10 @@ using System.Threading.Tasks;
 
 namespace Usale.DTO
 {
-    public class VendedorDTO
+    public class ImagemDTO
     {
-
         [Required]
-        public string Nome { get; set; }
-
-        [Required]
-        public string Email { get; set; }
-
-
-        public LojaDTO Loja { get; set; }
+        public string URL { get; set; }
 
     }
 }

@@ -4,10 +4,12 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Usale.DTO
+namespace Usale.Models
 {
-    public class ClienteDTO
+    public class Cliente
     {
+        public int ClienteId { get; set; }
+
         [Required]
         public string Nome { get; set; }
 
@@ -22,6 +24,5 @@ namespace Usale.DTO
 
         [Required]
         public string CPF { get; set; }
-
     }
 }
