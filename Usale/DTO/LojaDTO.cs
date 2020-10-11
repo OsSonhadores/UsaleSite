@@ -13,6 +13,9 @@ namespace Usale.DTO
         public string Logo { get; set; }
 
         [Required]
+        public string Endereco { get; set; }
+
+        [Required]
         public int QtdMaquininha { get; set; }
 
         [Required]
