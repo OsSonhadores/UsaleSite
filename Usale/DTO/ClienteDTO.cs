@@ -23,5 +23,9 @@ namespace Usale.DTO
         [Required]
         public string CPF { get; set; }
 
+        public string Password { get; set; }
+
+        public string ConfirmPassword { get; set; }
+
     }
 }

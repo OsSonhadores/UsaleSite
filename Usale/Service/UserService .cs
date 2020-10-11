@@ -11,7 +11,8 @@ namespace Usale.Service
 {
     public interface IUserService
     {
-  
+        Task CadastroCliente(ClienteDTO c);
+        Task CadastroVendedor(VendedorDTO v);
     }
 
     public class UserService : IUserService
@@ -26,7 +27,8 @@ namespace Usale.Service
 
         public async Task CadastroVendedor(VendedorDTO v)
         {
-            var config = new MapperConfiguration(cfg => {
+            var config = new MapperConfiguration(cfg =>
+            {
                 cfg.CreateMap<VendedorDTO, Vendedor>();
             });
 
@@ -37,7 +39,8 @@ namespace Usale.Service
 
         public async Task CadastroCliente(ClienteDTO c)
         {
-            var config = new MapperConfiguration(cfg => {
+            var config = new MapperConfiguration(cfg =>
+            {
                 cfg.CreateMap<ClienteDTO, Cliente>();
             });
 

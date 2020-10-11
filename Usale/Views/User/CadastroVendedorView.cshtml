@@ -5,16 +5,12 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<link rel="stylesheet" href="~/css/UserStyle.css" />
 
-<div class="container">
-    <h1 class="mt-5">CadastroVendedorView</h1>
-
-    <h4>Simões é gay</h4>
-    <hr />
-    <div class="container-fluid">
-        <div class="row">
+<div class="row-mt-bt container-fluid">
+        <div class="row d-flex justify-content-center">
             <div class="col-md-4">
-                <form asp-action="CadastroVendedorView">
+                <form asp-action="ModalProdRegister">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group">
                         <label asp-for="Nome" class="control-label"></label>
@@ -27,15 +23,29 @@
                         <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Create" class="btn btn-primary" />
+                        <label asp-for="Loja" class="control-label"></label>
+                        <input asp-for="Loja" class="form-control" />
+                        <span asp-validation-for="Loja" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Cnpj" class="control-label"></label>
+                        <input asp-for="Cnpj" class="form-control" />
+                        <span asp-validation-for="Cnpj" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label">Senha</label>
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PasswordConfirmation" class="control-label">Confirme sua senha</label>
+                        <input asp-for="PasswordConfirmation" class="form-control" />
+                        <span asp-validation-for="PasswordConfirmation" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Registrar-se" class="btn btn-primary w-100" />
                     </div>
                 </form>
             </div>
         </div>
-
-        <div>
-            <a asp-action="Index">Back to List</a>
-        </div>
-
-    </div>
 </div>

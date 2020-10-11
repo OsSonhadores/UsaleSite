@@ -18,5 +18,11 @@ namespace Usale.DTO
 
         public LojaDTO Loja { get; set; }
 
+        public string Cnpj { get; set; }
+
+        public string Password { get; set; }
+
+        public string PasswordConfirmation { get; set; }
+
     }
 }
