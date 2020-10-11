@@ -1,13 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Usale.DTO;
 using Usale.Service;
 
 namespace Usale.Controllers
 {
+
     public class UserController: Controller
     {
 
@@ -18,12 +16,12 @@ namespace Usale.Controllers
             _serv = serv;
         }
 
-        public IActionResult UserCliente()
+        public IActionResult CadastroClienteView()
         {
             return View();
         }
 
-        public IActionResult UserLojista()
+        public IActionResult CadastroVendedorView()
         {
             return View();
         }

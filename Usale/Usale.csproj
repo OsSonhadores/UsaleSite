@@ -8,17 +8,14 @@
 
   <ItemGroup>
     <Compile Remove="Views\NovaPasta1\**" />
-    <Compile Remove="Views\NovaPasta\**" />
     <Content Remove="Views\NovaPasta1\**" />
-    <Content Remove="Views\NovaPasta\**" />
     <EmbeddedResource Remove="Views\NovaPasta1\**" />
-    <EmbeddedResource Remove="Views\NovaPasta\**" />
     <None Remove="Views\NovaPasta1\**" />
-    <None Remove="Views\NovaPasta\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Remove="Views\User\UserCliente.cshtml" />
+    <Content Remove="Views\User\Vendedor.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,7 +36,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Views\User\" />
+    <Folder Include="Views\NovaPasta\" />
   </ItemGroup>
 
 </Project>
