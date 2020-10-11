@@ -6,32 +6,37 @@
 
 <style>
 
-    .modal{
-        margin-top: 100px;
+   div .modal{
+        margin: 180px 0 0 450px;
+        display: block;
+        width: 600px;
+        height: 400px;
+        background-color: white;
+        border: 1px solid rgba(0,0,0,0.2);
     }
+
+   .textContent{
+       margin-top: 70px;
+   }
+
 
 </style>
 
-<div class="modal" tabindex="-1" role="dialog" style="display: block;">
-    <div class="modal-dialog text-center" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Tipo de Perfil de Banana</h5>
-            </div>
-            <div class="d-flex flex-column bd-highlight mb-3" style="
-    margin-left: 145px;
-    margin-top: 100px;
-">
-                <button type="button" class="btn btn-secondary w-50" style="
-    width: 200px !important;
-">Fechar</button>
-                <button type="button" class="btn btn-primary w-50 mt-4 mb-5" style="
-    width: 200px !important;
-">Salvar mudanças</button>
-            </div>
+<div class="container">
+    <div class="modal">
+        <div class="modal-header text-center">
+            <h5 class="modal-title w-100">Registro de Perfil</h5>
+        </div>
+        <div class="text-center mt-5">
+            <h5>Escolha o tipo de perfil que mais combina com você!</h5>
+        </div>
+        <div class="container text-center d-flex justify-content-center flex-column w-50 textContent">
+            <a class="btn btn-primary" asp-action="UserCliente" asp-controller="User">Cliente</a>
+            <a class="btn btn-info mt-2" asp-action="UserLojista" asp-controller="User">Lojista</a>
         </div>
     </div>
 </div>
+
 
 <script src="~/js/jquery-3.4.1-COMPLETASSO.js"></script>
 
@@ -42,9 +47,5 @@
 <script>
 
     
-
-    $(document).ready(function () {
-        $('.modal').show();
-    });
 
 </script>
