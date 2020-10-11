@@ -17,6 +17,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: #9fa1a4;
   line-height: 1.5;
+  background:#fff!important;
 }
 
 a {
@@ -67,13 +68,15 @@ figure figcaption {
 }
 
 .site-section {
-  padding: 7rem 0;
+    padding: 7rem 0;
+    background: #fff
 }
 
 .section-heading {
     font-size: 3rem;
+    width: 110%;
     font-weight: 700;
-    background: linear-gradient(-45deg, #e6b800, #e67b00);
+    background: linear-gradient(-45deg, #138496, #1b6ec2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -107,15 +110,28 @@ figure figcaption {
 
 /* Default btn sre-tyling */
 
+
 .btn {
   border: none;
   padding: 15px 30px !important;
 }
 
+.bnt {
+    border: 1px #ffff solid !important;
+    padding: 10px 20px 10px 20px !important;
+    border-radius: 5px;
+}
+
+    .bnt:hover {
+        background: #fff;
+        color: #138496 !important;
+    }
+
 .btn.btn-outline-white {
-  border: 2px solid #fff;
-  background: none;
-  color: #fff;
+    padding-left: -20px !important;
+    border: 2px solid #fff;
+    background: none;
+    color: #fff;
 }
 
     .btn.btn-outline-white:hover {
@@ -143,7 +159,7 @@ figure figcaption {
 }
 
     .feature-1 .wrap-icon.icon-1 {
-        background: linear-gradient(-45deg, #e6b800, #e67b00);
+        background: linear-gradient(-45deg, #138496, #1b6ec2);
     }
 
 .feature-1 .wrap-icon .icon {
@@ -334,7 +350,7 @@ figure figcaption {
 /* CTA Section */
 
 .cta-section {
-    background: linear-gradient(to right, #e67b00 0%, #ffbc00 100%);
+    background: linear-gradient(to right, #138496 0%, #1b6ec2 100%);
     color: #fff;
 }
 
@@ -727,8 +743,7 @@ figure figcaption {
   top: -50%;
   overflow: hidden;
   left: 0;
-  box-shadow: 0 15px 50px 0 rgba(0, 0, 0, 0.3);
-  border-radius: 30px;
+  width: 100%!important;
 }
 
 .hero-section .iphone-wrap .phone-2,
@@ -754,10 +769,10 @@ figure figcaption {
   width: 100%;
 }
 
-.site-navbar .site-logo {
-  position: relative;
-  font-size: 24px;
-}
+    .site-navbar .site-logo {
+        position: relative;
+        font-size: 20px;
+    }
 
 .site-navbar .site-logo a {
   color: #fff;
