@@ -672,7 +672,7 @@ figure figcaption {
 --------------------------------------------------------------*/
 
 .hero-section {
-    background: linear-gradient(to right, rgba(255, 150, 0, 0.9) 0%, rgba(255, 150, 0, 0.9) 100%), url(../img/hero-bg.jpg);
+    background: linear-gradient(to right, rgba(19, 132, 150, 0.9) 0%, rgba(27, 110, 194, 0.9) 100%), url(../img/hero-bg.jpg);
     position: relative;
 }
 
