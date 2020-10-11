@@ -1,5 +1,11 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@using Microsoft.AspNetCore.Identity
+@using Usale.Areas.Identity.Data
+
+@inject SignInManager<UsaleUser> SignInManager
+@inject UserManager<UsaleUser> UserManager
+
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,51 +33,125 @@
 
 </head>
 <body>
-    <header class="site-navbar js-sticky-header site-navbar-target" style="color:rgb(0, 0, 0);" role="banner">
 
-        <div class="container pt-2">
+    <div id="sticky-wrapper" class="sticky-wrapper" style="height: 92px;">
+        <header class="site-navbar js-sticky-header site-navbar-target" style="color: rgb(0, 0, 0); width: 1440px;" role="banner">
+
+            <div class="container pt-2">
 
 
-            <div class="row align-items-center">
+                <div class="row align-items-center">
 
 
-                <div class="col-6 col-lg-2 float-left">
-                    <a asp-controller="home" asp-action="Index">
-                        <img src="~/images/logo-milenio-tech-white-transparente.png" width="65">
-                    </a>
+                    <div class="col-6 col-lg-2 float-left">
+                        <a href="/">
+                            <img src="~/img/logo-pequenina-clara.png" width="65">
+                        </a>
 
-                    <div class="col-2 col-lg-2 float-right">
-                        <h1 class="mb-0 site-logo pt-3 mb-0">
-                            <a>
-                                MilênioTech
-                            </a>
-                        </h1>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-10 d-none d-lg-block">
-                    <nav class="site-navigation position-relative text-right" role="navigation">
-                        <div id="minha-navbar-lateral">
-                            <ul id="listinha-meu-menu-lateral">
-                                <partial name="_LoginPartial" />
-                            </ul>
+                        <div class="col-2 col-lg-2 float-right">
+                            <h1 class="mb-0 site-logo pt-3 mb-0 mt-2">
+                                <a>
+                                    USALE
+                                </a>
+                            </h1>
                         </div>
-                    </nav>
+                    </div>
+
+                    <div class="col-12 col-md-10 d-none d-lg-block">
+                        <nav class="site-navigation position-relative text-right" role="navigation">
+
+
+
+
+                            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                                <li>
+                                    <a class="nav-link" href="/Identity/Account/Register">Registrar</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" href="/Identity/Account/Login">Entrar</a>
+                                </li>
+                                <li>
+                                    <a class="nav-link" href="/Home/Contato">Contato</a>
+                                </li>
+                                <li class="nav-item active">
+                                </li>
+
+
+                            </ul>
+
+
+
+                        </nav>
+                    </div>
+
+
+                    <div class="col-6 d-inline-block d-lg-none ml-md-0 py-3" style="position: relative; top: 3px;">
+
+                        <a href="#" id="botao-navbar" class="burger site-menu-toggle js-menu-toggle active" data-toggle="collapse" data-target="#main-navbar">
+                            <span></span>
+                        </a>
+                    </div>
+
                 </div>
-
-
-                <div class="col-6 d-inline-block d-lg-none ml-md-0 py-3" style="position: relative; top: 3px;">
-
-                    <a href="#" id="botao-navbar" class="burger site-menu-toggle js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
-                        <span></span>
-                    </a>
-                </div>
-
             </div>
-        </div>
 
-    </header>
+        </header>
+    </div>
 
+    <style>
+        #minha-navbar-lateral {
+            position: fixed;
+            top: -1000px;
+            width: 100%;
+            height: auto;
+            background-color: #fff;
+            z-index: 999;
+        }
+
+        #listinha-meu-menu-lateral {
+            z-index: 1000;
+            color: #fff;
+        }
+    </style>
+
+    <div id="minha-navbar-lateral">
+        <ul id="listinha-meu-menu-lateral">
+            @if (SignInManager.IsSignedIn(User))
+            {
+                <li class="w-100 text-center text-light border-bottom border-light p-2">
+                    <a class="nav-link" asp-controller="Home" asp-action="Tutorial">Tutorial<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="w-100 text-center text-light border-bottom border-light p-2">
+                    <a class="nav-link" asp-controller="Intra" asp-action="Index">Intranet</a>
+                </li>
+                <li class="w-100 text-center text-light border-bottom border-light p-2">
+                    @*TODO: DEIXAR COM UMA CLASSE PRA FICAR COM CURSOR POINTER*@
+                    <form id="logoutForm" class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                        <button class="nav-link" id="logout" type="submit" style="background: #ffffff00; border: none;">
+                            Sair
+                        </button>
+                    </form>
+                </li>
+
+
+            }
+            else
+            {
+
+                <li class="w-100 text-center text-light border-bottom border-light p-2">
+                    <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Registrar</a>
+                </li>
+
+                <li class="w-100 text-center text-light border-bottom border-light p-2">
+                    <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Entrar</a>
+                </li>
+
+                <li class="w-100 text-center text-light border-bottom border-light p-2">
+                    <a class="nav-link" asp-controller="Home" asp-action="Contato">Contato</a>
+                </li>
+            }
+        </ul>
+    </div>
 
 
 
@@ -121,9 +201,8 @@
                     $("#minha-navbar-lateral").css({ "top": "-1000px", "transition-duration": "300ms" });
                     aberto = false;
                 }
-                else
-                {
-                    $("#minha-navbar-lateral").css({"top":"75px","transition-duration":"300ms"});
+                else {
+                    $("#minha-navbar-lateral").css({ "top": "75px", "transition-duration": "300ms" });
                     aberto = true;
                 }
 
