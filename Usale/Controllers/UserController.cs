@@ -1,13 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Usale.DTO;
 using Usale.Service;
 
 namespace Usale.Controllers
 {
+
     public class UserController: Controller
     {
 
@@ -18,26 +16,33 @@ namespace Usale.Controllers
             _serv = serv;
         }
 
-        public IActionResult UserCliente()
+        public IActionResult CadastroClienteView()
         {
             return View();
         }
 
-        public IActionResult UserLojista()
+        public IActionResult CadastroVendedorView()
+        {
+            return View();
+        }
+
+        public IActionResult ModalProdRegister()
         {
             return View();
         }
 
         [HttpGet]
-        public async Task CadastroVendedor([FromForm] VendedorDTO v)
+        public async Task<IActionResult> CadastroVendedor([FromForm] VendedorDTO v)
         {
             await _serv.CadastroVendedor(v);
+            return View("ModalRegisterProd", "UserController");
         }
 
         [HttpGet]
-        public async Task CadastroCliente([FromForm] ClienteDTO c)
+        public async Task<IActionResult> CadastroCliente([FromForm] ClienteDTO c)
         {
             await _serv.CadastroCliente(c);
+            return View("Index", "HomeController");
         }
 
     }

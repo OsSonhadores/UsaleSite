@@ -11,8 +11,8 @@ namespace Usale.Service
 {
     public interface IUserService
     {
-        Task CadastroVendedor(VendedorDTO v);
         Task CadastroCliente(ClienteDTO c);
+        Task CadastroVendedor(VendedorDTO v);
     }
 
     public class UserService : IUserService
