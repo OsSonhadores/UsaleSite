@@ -97,12 +97,11 @@
                         <div class="w-50 float-right">
                             @*INFOS DO PRODUTO/VENDA/ENTREGA E BTN GETNET DE COMPRAR*@
                             <div>
-                                <h2 class="text-dark text-right border-bottom mr-5">Preço: R$@(p.Preco)0</h2>
+                                <h2 class="text-dark text-right border-bottom mr-5">Preço: @(p.Preco.ToString("C"))</h2>
                             </div>
                             <div>
                                 <br />
-                                <h2 class="text-dark text-right border-bottom mr-5">Quantidade</h2>
-                                <h5 for="qtd-compra" class="text-dark text-right border-bottom mr-5">@(p.UniMedida)</h5>
+                                <h2 class="text-dark text-right border-bottom mr-5">Quantidade: @(p.UniMedida)</h2>
                                 <input value="1" min="1" max="100" type="number" id="qtd-compra" class="form-control" style="width: 100px; right: -400px; position: relative;" />
                             </div>
                             <div>
@@ -117,10 +116,8 @@
 
                             <div>
                                 <br />
-                                <h2 class="text-dark text-right border-bottom mr-5">Comprar:</h2>
-                                <button class="form-control" style="width: 200px; right: -300px; position: relative;">
-                                    Comprar
-                                </button>
+                                <button id="compra-btn" class="m-1 ml-5 pl-2 btn btn-lg" role="button" style="background: #ee1c25; width: 80%; padding: 10px; border-radius: 30px;">Comprar<i class="fa fa-shopping-cart fa-1x" aria-hidden="true"></i></button>
+
                             </div>
 
                         </div>
@@ -154,8 +151,11 @@
 
     $(document).ready(function () {
 
-        $(".btn-ver-produto").click(function () {
-            window.location.assign('@Url.Action("VerProduto","Venda")' + "?produtoId="+$(this).attr("id"));
+        $("#compra-btn").mouseover(function () {
+            $("#compra-btn").css({
+                "background": "#d41018",
+                "color": "#fff"
+            });
         });
 
     });
