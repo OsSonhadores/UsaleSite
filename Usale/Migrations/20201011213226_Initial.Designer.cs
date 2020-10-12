@@ -10,7 +10,7 @@ using Usale.Data;
 namespace Usale.Migrations
 {
     [DbContext(typeof(UsaleContext))]
-    [Migration("20201011001842_Initial")]
+    [Migration("20201011213226_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -6,6 +6,9 @@ namespace Usale.DTO
 {
     public class LojaDTO
     {
+
+        public int LojaId { get; set; }
+
         [Required]
         public string Banner { get; set; }
 

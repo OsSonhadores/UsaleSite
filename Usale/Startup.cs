@@ -31,10 +31,19 @@ namespace Usale
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IUserRepository, UserRepository>();
 
+            services.AddTransient<IProdutoService, ProdutoService>();
+            services.AddTransient<IProdutoRepository, ProdutoRepository>();
+
+            services.AddTransient<ILojaService, LojaService>();
+            services.AddTransient<ILojaRepository, LojaRepository>();
+
+
+            services.AddTransient<IPopulaBanco, PopulaBanco>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serv)
         {
             if (env.IsDevelopment())
             {
@@ -60,6 +69,9 @@ namespace Usale
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            serv.GetService<IPopulaBanco>().Popula();
+
         }
     }
 }

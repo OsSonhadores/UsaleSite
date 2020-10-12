@@ -12,8 +12,7 @@ namespace Usale.DTO
 
 
         [Required]
-        /*  TODO: VER QUAL É O TIPO DESSA PORRA NO FRONT DA LINKO PRA PEGAR IMAGENS DO JEITO CORNO*/
-        public string Imagens { get; set; }
+        public IList<ImagemDTO> Imagens { get; set; }
 
         [Required]
         public string Descricao { get; set; }

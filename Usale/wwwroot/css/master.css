@@ -425,12 +425,6 @@ figure.books-img img{
   background-image: url(../images/car/nav-icon.png)!important;
 }
 
-span.carousel-control-next-icon{
-  background-image: url(../images/car/seta-dir.png)!important;
-  width: 30px;
-  height: 30px;
-
-}
 
 div#navbarTogglerDemo03{
   background-color: #00000040;

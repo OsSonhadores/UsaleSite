@@ -25,6 +25,8 @@ namespace Usale.Models
         [Required]
         public string CNPJ { get; set; }
 
+        [Required]
+        public string Endereco { get; set; }
 
         public IList<Produto> Produtos { get; set; }
 
