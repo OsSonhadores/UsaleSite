@@ -1,22 +1,22 @@
 ﻿Highcharts.chart('grafico1', {
 
     title: {
-        text: 'Solar Employment Growth by Sector, 2010-2016'
+        text: 'Lucro Dos ultimos meses'
     },
 
     subtitle: {
-        text: 'Source: thesolarfoundation.com'
+        text: 'Source: www.usale.com.br'
     },
 
     yAxis: {
         title: {
-            text: 'Number of Employees'
+            text: 'Numero de vendas'
         }
     },
 
     xAxis: {
         accessibility: {
-            rangeDescription: 'Range: 2010 to 2017'
+            rangeDescription: 'Ultimos meses'
         }
     },
 
@@ -36,19 +36,19 @@
     },
 
     series: [{
-        name: 'Installation',
+        name: 'Jan',
         data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
     }, {
-        name: 'Manufacturing',
+        name: 'Fev',
         data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
     }, {
-        name: 'Sales & Distribution',
+        name: 'Mar',
         data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
     }, {
-        name: 'Project Development',
+        name: 'Abr',
         data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
     }, {
-        name: 'Other',
+        name: 'Mai',
         data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
     }],
 
@@ -1967,15 +1967,15 @@ Highcharts.chart('grafico2', {
     },
 
     caption: {
-        text: 'um gráfico'
+        text: 'Tempo de entrega medio'
     },
 
     title: {
-        text: '2017 Tour de France Stage 8: Dole - Station des Rousses'
+        text: 'Tempo de entrega'
     },
 
     accessibility: {
-        description: 'Image description: An annotated line graph illustrates the 8th stage of the 2017 Tour de France cycling race from the start point in Dole to the finish line at Station des Rousses. Altitude is plotted on the Y-axis at increments of 500m and distance is plotted on the X-axis in increments of 25 kilometers. The line graph is interactive, and the user can trace the altitude level at every 100-meter point along the stage. The graph is shaded below the data line to visualize the mountainous altitudes encountered on the 187.5-kilometre stage. The three largest climbs are highlighted at Col de la Joux, Côte de Viry and the final 11.7-kilometer, 6.4% gradient climb to Montée de la Combe de Laisia Les Molunes which peaks at 1200 meters above sea level. The stage passes through the villages of Arbois, Montrond, Bonlieu, Chassal and Saint-Claude along the route.'
+        description: 'tempo médio'
     },
 
     credits: {
@@ -1995,7 +1995,7 @@ Highcharts.chart('grafico2', {
                 x: 27.98,
                 y: 255
             },
-            text: 'Arbois'
+            text: 'Segunda'
         }, {
             point: {
                 xAxis: 0,
@@ -2003,7 +2003,7 @@ Highcharts.chart('grafico2', {
                 x: 45.5,
                 y: 611
             },
-            text: 'Montrond'
+            text: 'Terça'
         }, {
             point: {
                 xAxis: 0,
@@ -2011,7 +2011,7 @@ Highcharts.chart('grafico2', {
                 x: 63,
                 y: 651
             },
-            text: 'Mont-sur-Monnet'
+            text: 'Quarta'
         }, {
             point: {
                 xAxis: 0,
@@ -2020,7 +2020,7 @@ Highcharts.chart('grafico2', {
                 y: 789
             },
             x: -10,
-            text: 'Bonlieu'
+            text: 'Quinta'
         }, {
             point: {
                 xAxis: 0,
@@ -2028,7 +2028,7 @@ Highcharts.chart('grafico2', {
                 x: 129.5,
                 y: 382
             },
-            text: 'Chassal'
+            text: 'Sexta'
         }, {
             point: {
                 xAxis: 0,
@@ -2036,7 +2036,7 @@ Highcharts.chart('grafico2', {
                 x: 159,
                 y: 443
             },
-            text: 'Saint-Claude'
+            text: 'Sabado'
         }]
     }, {
         labels: [{
@@ -2047,7 +2047,7 @@ Highcharts.chart('grafico2', {
                 y: 1026
             },
             x: -30,
-            text: 'Col de la Joux'
+            text: 'Segunda'
         }, {
             point: {
                 xAxis: 0,
@@ -2055,7 +2055,7 @@ Highcharts.chart('grafico2', {
                 x: 138.5,
                 y: 748
             },
-            text: 'Côte de Viry'
+            text: 'Terça'
         }, {
             point: {
                 xAxis: 0,
@@ -2063,7 +2063,7 @@ Highcharts.chart('grafico2', {
                 x: 176.4,
                 y: 1202
             },
-            text: 'Montée de la Combe<br>de Laisia Les Molunes'
+            text: 'Quarta'
         }]
     }, {
         labelOptions: {
@@ -2083,7 +2083,7 @@ Highcharts.chart('grafico2', {
                 x: 96.2,
                 y: 783
             },
-            text: '6.1 km climb<br>4.6% on avg.'
+            text: 'Quinta'
         }, {
             point: {
                 xAxis: 0,
@@ -2091,7 +2091,7 @@ Highcharts.chart('grafico2', {
                 x: 134.5,
                 y: 540
             },
-            text: '7.6 km climb<br>5.2% on avg.'
+            text: 'Sexta'
         }, {
             point: {
                 xAxis: 0,
@@ -2099,7 +2099,7 @@ Highcharts.chart('grafico2', {
                 x: 172.2,
                 y: 925
             },
-            text: '11.7 km climb<br>6.4% on avg.'
+            text: 'Sexta.'
         }]
     }],
 
@@ -2112,7 +2112,7 @@ Highcharts.chart('grafico2', {
             text: 'Distance'
         },
         accessibility: {
-            rangeDescription: 'Range: 0 to 187.8km.'
+            rangeDescription: 'Por tempo.'
         }
     },
 

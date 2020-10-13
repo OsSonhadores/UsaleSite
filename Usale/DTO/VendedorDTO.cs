@@ -14,15 +14,10 @@ namespace Usale.DTO
 
         [Required]
         public string Email { get; set; }
-
+        public string Password { get; set; }
 
         public LojaDTO Loja { get; set; }
 
-        public string Cnpj { get; set; }
-
-        public string Password { get; set; }
-
-        public string PasswordConfirmation { get; set; }
 
     }
 }

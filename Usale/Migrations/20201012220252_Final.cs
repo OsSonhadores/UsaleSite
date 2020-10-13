@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Usale.Migrations
 {
-    public partial class Initial : Migration
+    public partial class Final : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -69,11 +69,11 @@ namespace Usale.Migrations
                 {
                     LojaId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Banner = table.Column<string>(nullable: false),
-                    Logo = table.Column<string>(nullable: false),
-                    QtdMaquininha = table.Column<int>(nullable: false),
-                    Nome = table.Column<string>(nullable: false),
-                    CNPJ = table.Column<string>(nullable: false)
+                    Banner = table.Column<string>(nullable: true),
+                    Logo = table.Column<string>(nullable: true),
+                    Nome = table.Column<string>(nullable: true),
+                    Endereco = table.Column<string>(nullable: true),
+                    CNPJ = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -219,8 +219,8 @@ namespace Usale.Migrations
                 {
                     VendedorId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Nome = table.Column<string>(nullable: false),
-                    Email = table.Column<string>(nullable: false),
+                    Nome = table.Column<string>(nullable: true),
+                    Email = table.Column<string>(nullable: true),
                     LojaId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>

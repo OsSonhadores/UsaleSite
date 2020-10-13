@@ -30,6 +30,8 @@ namespace Usale.Service
             var config = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<VendedorDTO, Vendedor>();
+                cfg.CreateMap<LojaDTO, Loja>();
+                cfg.CreateMap<ProdutoDTO, Produto>();
             });
 
             IMapper mapper = config.CreateMapper();

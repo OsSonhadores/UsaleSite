@@ -10,20 +10,16 @@ namespace Usale.Models
     {
         public int LojaId { get; set; }
 
-        [Required]
         public string Banner { get; set; }
 
-        [Required]
         public string Logo { get; set; }
 
-        [Required]
-        public int QtdMaquininha { get; set; }
-
-        [Required]
         public string Nome { get; set; }
 
-        [Required]
+        public string Endereco { get; set; }
+
         public string CNPJ { get; set; }
+
 
 
         public IList<Produto> Produtos { get; set; }

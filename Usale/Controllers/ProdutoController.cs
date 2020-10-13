@@ -10,7 +10,7 @@ namespace Usale.Controllers
     {
 
         [HttpGet]
-        public IActionResult CadastraCsv()
+        public IActionResult CadastraProdCsv()
         {
             return View();
         }
