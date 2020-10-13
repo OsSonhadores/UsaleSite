@@ -9,21 +9,16 @@ namespace Usale.DTO
 
         public int LojaId { get; set; }
 
-        [Required]
         public string Banner { get; set; }
 
-        [Required]
         public string Logo { get; set; }
-
+        [Required]
+ 
+        public string Nome { get; set; }
+        
         [Required]
         public string Endereco { get; set; }
-
-        [Required]
-        public int QtdMaquininha { get; set; }
-
-        [Required]
-        public string Nome { get; set; }
-
+        
         [Required]
         public string CNPJ { get; set; }
 

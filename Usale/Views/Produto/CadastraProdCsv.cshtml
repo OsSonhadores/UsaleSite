@@ -37,7 +37,6 @@
                         </div>
 
                         @*CARROUSEL*@
-
                             <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
                                 <ol class="carousel-indicators">
                                     <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
@@ -45,22 +44,16 @@
                                     <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
                                 </ol>
                                 <div class="carousel-inner">
-                                    <div class="carousel-item active" style="height: 400px; background: url('https://images.pexels.com/photos/1083822/pexels-photo-1083822.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')">
-                                        <div class="carousel-caption d-none d-md-block" style="background: #13849650; border-radius: 5px;">
-                                            <h5 class="text-light">Second slide label</h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <div class="carousel-item active" style="height: 400px; background: url('https://images.pexels.com/photos/3178818/pexels-photo-3178818.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); background-position: bottom; background-size: cover;">
+                                        <div class="carousel-caption d-none d-md-block" style="background: #138496dd; border-radius: 5px;">
+                                            <h5 class="text-light">Online</h5>
+                                            <p>Preencha uma planilha de produtos e cadastre automaticamente sua loja online.</p>
                                         </div>
                                     </div>
-                                    <div class="carousel-item" style="height: 400px; background: url('https://images.pexels.com/photos/1083822/pexels-photo-1083822.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')">
-                                        <div class="carousel-caption d-none d-md-block" style="background: #13849650; border-radius: 5px;">
-                                            <h5 class="text-light">Second slide label</h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item" style="height: 400px; background: url('https://images.pexels.com/photos/1083822/pexels-photo-1083822.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')">
-                                        <div class="carousel-caption d-none d-md-block" style="background: #13849650; border-radius: 5px;">
-                                            <h5 class="text-light">Second slide label</h5>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <div class="carousel-item" style="height: 400px; background: url('https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); background-position: bottom; background-size: cover;">
+                                        <div class="carousel-caption d-none d-md-block" style="background: #138496dd; border-radius: 5px;">
+                                            <h5 class="text-light">Conforto</h5>
+                                            <p>Substitua as planilhas de papel por uma dash completa e intuitiva.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -75,7 +68,7 @@
                             </div>
 
 
-                        <p style="font-size: 16px; color: #1b6ec2; text-align: right; margin-right: 20px; margin-top: 10px;"><strong style="color: #104b87!important;" id="baixa-csv">Clique aqui</strong> para baixar a planilha de exemplo</p>
+                        <p style="font-size: 16px; color: #1b6ec2; text-align: right; margin-right: 20px; margin-top: 10px;"><strong style="color: #104b87!important;" id="baixa-planilha">Clique aqui</strong> para baixar a planilha de exemplo</p>
 
                         <form class="ml-5 mr-5">
                             <div class="form-group">
@@ -83,7 +76,7 @@
                                 <input id="csv" type="file" name="csv" class="form-control" />
                             </div>
 
-                            <button class="btn btn-primary w-100">Enviar</button>
+                            <button asp-controller="Dashboard" asp-action="Index" class="btn btn-primary w-100">Enviar</button>
                         </form>
 
 
@@ -118,15 +111,25 @@
 
     $(document).ready(function () {
 
-        $("#baixa-csv").mouseover(function () {
+        $("#baixa-planilha").mouseover(function () {
             $(this).css({
                 "cursor": "pointer",
                 "transition-duration": "250ms"
-            });                
+            });
         });
 
-        $("#baixa-csv").click(function () {
+        $("#baixa-planilha").click(function () {
             /*Realiza o download*/
+
+            $.ajax({
+                type: "GET",
+                url: "@Url.Action("BaixaPlanilha", "Home")",
+                data: {},
+                contentType: "text/plain",
+                success: function (response) {
+
+                },
+            });
 
         });
 

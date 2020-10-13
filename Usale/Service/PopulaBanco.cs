@@ -35,7 +35,7 @@ namespace Usale.Service
                 var v1 = new Vendedor()
                 {
                     Email = "lojista@loja_1",
-                    Nome = "Gustavo",
+                    Nome = "Gustavo",                    
                 };
 
                 var v2 = new Vendedor()
@@ -73,7 +73,6 @@ namespace Usale.Service
                 {
                     CNPJ = "XXXX-XXX-XXX-XX",
                     Nome = "Natural Food 1",
-                    QtdMaquininha = 2,
                     Logo = "logo1.png",
                     Banner = "https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
                     Endereco = "Rua Doutor João Lima, 125",
@@ -83,7 +82,6 @@ namespace Usale.Service
                 {
                     CNPJ = "XXXX-XXX-XXX-XX",
                     Nome = "Natural Food 2",
-                    QtdMaquininha = 2,
                     Logo = "logo2.png",
                     Banner = "https://images.pexels.com/photos/2292919/pexels-photo-2292919.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
                     Endereco = "Rua Eng. Lafant, 305",
@@ -93,7 +91,6 @@ namespace Usale.Service
                 {
                     CNPJ = "XXXX-XXX-XXX-XX",
                     Nome = "Natural Food 3",
-                    QtdMaquininha = 2,
                     Logo = "logo3.png",
                     Banner = "https://images.pexels.com/photos/95425/pexels-photo-95425.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
                     Endereco = "Rua Prof. Danrley Rodrigues, 249",
@@ -103,7 +100,6 @@ namespace Usale.Service
                 {
                     CNPJ = "XXXX-XXX-XXX-XX",
                     Nome = "Natural Food 4",
-                    QtdMaquininha = 2,
                     Logo = "logo4.png",
                     Banner = "https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
                     Endereco = "Rua Vitoria Chan, 745",
@@ -113,7 +109,6 @@ namespace Usale.Service
                 {
                     CNPJ = "XXXX-XXX-XXX-XX",
                     Nome = "Natural Food 5",
-                    QtdMaquininha = 2,
                     Logo = "logo5.png",
                     Banner = "https://images.pexels.com/photos/696205/pexels-photo-696205.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
                     Endereco = "Av. Ana Paula Da Silva, 1280",
@@ -123,7 +118,6 @@ namespace Usale.Service
                 {
                     CNPJ = "XXXX-XXX-XXX-XX",
                     Nome = "Natural Food 6",
-                    QtdMaquininha = 2,
                     Logo = "logo6.png",
                     Banner = "https://images.pexels.com/photos/4117143/pexels-photo-4117143.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
                     Endereco = "Av. Jurupimba, 192",

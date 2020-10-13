@@ -13,6 +13,11 @@ namespace Usale.Controllers
             return View();
         }
 
+        public IActionResult QrCode()
+        {
+            return View();
+        }
+
 
     }
 }
